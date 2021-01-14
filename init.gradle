@@ -3,7 +3,7 @@ gradle.projectsLoaded {
         buildscript {
             repositories {
 			maven{
-			  url "http://127.0.0.1:8080/artifactory/gradle-snapshot-local"
+			  url "http://ncte202723.ncte.navy.local:80/artifactory/gradle-local-snapshots/"
 			}
 			//mavenLocal()
             dependencies {
