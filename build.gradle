@@ -42,7 +42,25 @@ allprojects {
     }
   }
 }
+group = 'io.igorpopov'
+version = '1.0'
 
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+              username 'admin'
+              password 'admin@123'
+            }
+            url "http://13.58.8.1:8081/artifactory/testfss"
+        }
+    }
+}
 // Setting this property to true will make the artifactoryPublish task
 // skip this module (in our case, the root module):
 artifactoryPublish.skip = true
